@@ -43,6 +43,14 @@
                 @endforeach
             </select><div class="validate"></div>
         </div>
+        <div class="col-lg-4 col-md-6 form-group mt-3">
+            <select name="chef_id" id="chef_id" class="form-select" required>
+                <option value="">Pilih kategori</option>
+                @foreach ($foodchefs as $foodcheaf)
+                    <option value="{{ $foodcheaf->id }}">{{ $foodcheaf->name }}</option>
+                @endforeach
+            </select><div class="validate"></div>
+        </div>
         </div>
         <div class="form-group mt-3">
         <textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>

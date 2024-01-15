@@ -17,6 +17,8 @@ return new class extends Migration
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('categories');
             $table->string('email')->nullable();
+            $table->unsignedBigInteger('chef_id');
+            $table->foreign('chef_id')->references('id')->on('foodchefs');
             $table->string('phone')->nullable();
             $table->string('guest')->nullable();
             $table->string('date')->nullable();

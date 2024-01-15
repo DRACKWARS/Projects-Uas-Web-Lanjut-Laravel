@@ -101,6 +101,7 @@ class AdminController extends Controller
         $data->name=$request->name;
         $data->category_id=$request->category_id;
         $data->email=$request->email;
+        $data->chef_id=$request->chef_id;
         $data->phone=$request->phone;
         $data->date=$request->date;
         $data->time=$request->time;
@@ -109,6 +110,7 @@ class AdminController extends Controller
 
         $data->save();
         $categories = Category::all();
+        $foodchefs = foodchef::all();
         return redirect()->back();
     }
 

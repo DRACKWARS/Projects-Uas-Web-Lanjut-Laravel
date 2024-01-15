@@ -10,6 +10,7 @@
             <th>Email</th>
             <th>Category</th>
             <th>Phone</th>
+            <th>Chef</th>
             <th>Guest</th>
             <th>Date</th>
             <th>Time</th>
@@ -25,6 +26,7 @@
             <th>{{$data->email}}</th>
             <th>{{$data->category_id}}</th>
             <th>{{$data->phone}}</th>
+            <th>{{$data->chef_id}}</th>
             <th>{{$data->guest}}</th>
             <th>{{$data->date}}</th>
             <th>{{$data->time}}</th>

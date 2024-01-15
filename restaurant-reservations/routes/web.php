@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Category;
+use App\Models\Foodchef;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -60,8 +61,9 @@ Route::get("/foodcheaf",[HomeController::class,"cheaf"]);
 
 Route::get('/reservation', function () {
     $categories = Category::all();
+    $foodchefs = foodchef::all();
 
-    return view('reservation')->with(compact('categories'));
+    return view('reservation')->with(compact('categories','foodchefs'));
 });
 
 Route::middleware([
